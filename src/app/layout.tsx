@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import Drawer from "@/components/Layout/Drawer/Drawer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,9 @@ export default function RootLayout({
         />
         {/* Stonly widget - end */}
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Drawer>{children}</Drawer>
+      </body>
     </html>
   );
 }
